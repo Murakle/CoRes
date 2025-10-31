@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coral Resurrection — Contact</title>
+  <meta name="description" content="Contact the Coral Resurrection team and find us on the map.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Coral Resurrection</a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="primary-nav">
+      <a href="index.html">About</a>
+      <a href="trips.html">Trips</a>
+      <a class="active cta" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <header class="page-intro">
+      <h1>Contact</h1>
+      <p>Reach out for trip info, partnerships, or media. We usually respond within 1–2 business days.</p>
+    </header>
+
+    <section class="contact-grid">
+      <div class="contact-card">
+        <h2>Links</h2>
+        <ul class="links">
+          <li><a href="#" aria-label="Email">📧 hello@coralresurrection.example</a></li>
+          <li><a href="#" aria-label="Instagram">📸 @coral.resurrection</a></li>
+          <li><a href="#" aria-label="YouTube">▶️ Coral Resurrection Lab</a></li>
+          <li><a href="#" aria-label="Press kit">🗂 Press kit</a></li>
+        </ul>
+      </div>
+
+      <div class="contact-card">
+        <h2>Where we work</h2>
+        <p>Field operations span the Indian Ocean, Coral Triangle, and Caribbean, in partnership with local organizations.</p>
+      </div>
+    </section>
+
+    <section class="map-wrap">
+      <div class="map">
+        <iframe title="Map" width="100%" height="100%" frameborder="0" scrolling="no" src="https://www.openstreetmap.org/export/embed.html?bbox=23.9%2C-34.0%2C178.0%2C23.0&amp;layer=mapnik"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Coral Resurrection — Say hello.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</body>
+</html>
+
+
