@@ -1,8 +1,13 @@
 // Basic parallax enhancement for iOS/Safari fallbacks (no heavy JS)
 (function () {
+  const ua = navigator.userAgent || navigator.vendor || '';
+  const isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  if (isIOS) { document.documentElement.classList.add('ios'); }
   const supportsFixed = window.CSS && CSS.supports && CSS.supports('background-attachment: fixed');
-  if (supportsFixed) return;
+  const needFallback = isIOS || !supportsFixed;
+  if (!needFallback) return;
   const heroes = document.querySelectorAll('.hero-parallax');
+  heroes.forEach(h => { h.style.backgroundAttachment = 'scroll'; });
   const onScroll = () => {
     const y = window.scrollY;
     heroes.forEach(h => {
