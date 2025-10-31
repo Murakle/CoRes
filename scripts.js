@@ -17,6 +17,17 @@
   document.addEventListener('scroll', onScroll, { passive: true });
 })();
 
+// Stable viewport height on mobile (prevents jumpy UI when browser bars show/hide)
+(function () {
+  const setVh = () => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  };
+  setVh();
+  window.addEventListener('resize', setVh);
+  window.addEventListener('orientationchange', setVh);
+})();
+
 // Mobile hamburger menu toggle with ARIA updates
 (function () {
   function initHeader(header) {

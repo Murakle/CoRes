@@ -59,6 +59,10 @@ body {
   background-position: center; background-size: cover; background-attachment: fixed;
 }
 .ios .hero-parallax { background-attachment: scroll; }
+@media (max-width: 640px) {
+  /* Use JS-calculated viewport height so hero doesn't jump when browser UI hides/shows */
+  .hero-parallax { min-height: calc(var(--vh, 1vh) * 70); }
+}
 .hero .hero-content { max-width: 760px; padding: 24px; margin: 0 16px; border-radius: var(--radius);
   background: color-mix(in srgb, #ffffff 70%, transparent);
   box-shadow: 0 10px 30px rgba(16,24,40,.08), inset 0 0 0 1px rgba(2,6,23,.06);
