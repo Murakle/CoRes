@@ -130,8 +130,8 @@ body {
   .split { grid-template-columns: 1fr; }
   .media.right, .media.left { order: initial; }
   .band { grid-template-columns: 1fr; }
-  .trip { grid-template-columns: 1fr; }
-  .trip img { aspect-ratio: 4 / 3; }
+  .trip { display: block; }
+  .trip img { width: 100%; height: auto; aspect-ratio: 4 / 3; }
   .contact-grid { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: 1fr 1fr; }
   .gallery img { height: 160px }
