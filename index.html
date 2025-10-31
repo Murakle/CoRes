@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coral Resurrection — About</title>
+  <meta name="description" content="How the Coral Resurrection project works and why reefs matter.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Coral Resurrection</a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="primary-nav">
+      <a class="active" href="index.html">About</a>
+      <a href="trips.html">Trips</a>
+      <a class="cta" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero-parallax" style="--hero-image:url('img/bg_about.webp');">
+      <div class="hero-content">
+        <h1>About the project</h1>
+        <p>We restore coral reefs by combining nursery propagation, climate-smart outplanting, and community partnerships.</p>
+      </div>
+    </section>
+
+    <section class="container split">
+      <div class="text">
+        <h2>Why reefs matter</h2>
+        <p>Coral reefs occupy less than <strong>1% of the ocean floor</strong> yet support about <em>25% of marine life</em>. They buffer storms, sustain fisheries, and anchor local economies through nature-based tourism.</p>
+        <p>Heat stress and pollution are pushing many systems past thresholds. Restoration buys time: it <strong>stabilizes structure</strong>, preserves genetics, and keeps ecosystems functional while climate action scales.</p>
+      </div>
+      <figure class="media right">
+        <img src="img/decor2.jpg" alt="Close-up of healthy coral polyps">
+        <figcaption>Close-up of resilient coral polyps.</figcaption>
+      </figure>
+    </section>
+
+    <section class="container split">
+      <figure class="media left">
+        <img src="img/decor3.jpg" alt="Underwater coral tree nursery">
+        <figcaption>Suspended nursery growing climate-tolerant fragments.</figcaption>
+      </figure>
+      <div class="text">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li><strong>Collect</strong> fragments of opportunity and spawn-derived recruits.</li>
+          <li><strong>Grow</strong> them in ocean nurseries to boost survival and diversity.</li>
+          <li><strong>Outplant</strong> to priority sites with micro-fragment techniques.</li>
+          <li><strong>Monitor</strong> growth, survival, and biodiversity with open protocols.</li>
+        </ol>
+        <p>All activities follow local permits and are co-designed with neighboring communities to ensure <em>long-term stewardship</em>.</p>
+      </div>
+    </section>
+
+    <section class="container card band">
+      <article class="card">
+        <h3>Science-first</h3>
+        <p>We publish methods and results in accessible formats so anyone can track impact and learn from our work.</p>
+      </article>
+      <article class="card">
+        <h3>Community-led</h3>
+        <p>Local partners guide site selection and care for nurseries, ensuring benefits stay rooted where reefs grow.</p>
+      </article>
+      <article class="card">
+        <h3>Climate-smart</h3>
+        <p>We prioritize heat-tolerant genotypes and shaded microhabitats to improve survival through marine heatwaves.</p>
+      </article>
+    </section>
+
+    <section class="container split">
+      <div class="text">
+        <h2>From nurseries to thriving reefs</h2>
+        <p>Restoration is more than planting. We stabilize rubble, design microhabitats, and <strong>stagger outplants</strong> through seasons to improve survival. Each site receives a bespoke plan based on currents, light, and heat history.</p>
+        <ul>
+          <li><strong>Site design:</strong> shade patches, flow corridors, and fish refuges.</li>
+          <li><strong>Genetic diversity:</strong> mix tolerant and fast-growing lineages.</li>
+          <li><strong>Monitoring:</strong> photo quadrats, growth rates, and biodiversity scores.</li>
+        </ul>
+      </div>
+      <figure class="media right">
+        <img src="img/decor1.png" alt="Shallow reef crest with waves">
+        <figcaption>Designing with energy and light in mind.</figcaption>
+      </figure>
+    </section>
+
+    <section class="container gallery">
+      <figure>
+        <img src="img/method1.jpg" alt="Divers working at nursery">
+        <figcaption>Coral tree maintenance with local partners.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/method2.jpg" alt="Healthy reef scene">
+        <figcaption>Recovery mosaics attracting reef fish.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/method3.jpg" alt="Coral close-up polyps">
+        <figcaption>Polyps feeding at dusk — growth in action.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/method4.jpg" alt="Coral fragments labeled in nursery">
+        <figcaption>Labeled fragments for open-data tracking.</figcaption>
+      </figure>
+    </section>
+
+    <section class="container quote">
+      <blockquote>
+        “Every fragment we plant is a promise to the future reef. The work is patient, the results beautiful.”
+      </blockquote>
+      <p class="attribution">— Field lead, Coral Resurrection</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Coral Resurrection — Open practices, lasting reefs.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</body>
+</html>
+
+
