@@ -17,15 +17,19 @@
   document.addEventListener('scroll', onScroll, { passive: true });
 })();
 
-// Stable viewport height on mobile (prevents jumpy UI when browser bars show/hide)
+// Stable viewport height on mobile (avoid resizing on URL bar hide/show)
 (function () {
   const setVh = () => {
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   };
+  // Set once on load
   setVh();
-  window.addEventListener('resize', setVh);
-  window.addEventListener('orientationchange', setVh);
+  // Update only on orientation change (not on every resize to avoid jumps)
+  window.addEventListener('orientationchange', () => {
+    // Delay to let viewport settle
+    setTimeout(setVh, 250);
+  });
 })();
 
 // Mobile hamburger menu toggle with ARIA updates
@@ -59,6 +63,22 @@
     });
   }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
   elements.forEach(el => io.observe(el));
+})();
+
+// Toggle hero in-view class to show fixed hero background only when visible
+(function () {
+  const heroes = document.querySelectorAll('.hero-parallax');
+  if (!('IntersectionObserver' in window) || heroes.length === 0) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      } else {
+        entry.target.classList.remove('in-view');
+      }
+    });
+  }, { threshold: 0 });
+  heroes.forEach(h => io.observe(h));
 })();
 
 // Smooth card reaction when details open/close

@@ -59,9 +59,20 @@ body {
   background-position: center; background-size: cover; background-attachment: fixed;
 }
 .ios .hero-parallax { background-attachment: scroll; }
+/* Fixed viewport background that shows only while hero is in view */
+.hero-parallax { position: relative; isolation: isolate; }
+.hero-parallax .hero-bg { position: fixed; inset: 0; z-index: -1; background-image: var(--hero-image); background-size: cover; background-position: center; opacity: 0; transition: opacity .25s ease; pointer-events: none; }
+.hero-parallax.in-view .hero-bg { opacity: 1; }
 @media (max-width: 640px) {
   /* Use JS-calculated viewport height so hero doesn't jump when browser UI hides/shows */
   .hero-parallax { min-height: calc(var(--vh, 1vh) * 70); }
+}
+
+/* Prefer modern viewport units where supported to avoid resize on URL bar hide/show */
+@supports (height: 1svh) {
+  @media (max-width: 640px) {
+    .hero-parallax { min-height: 70svh; }
+  }
 }
 .hero .hero-content { max-width: 760px; padding: 24px; margin: 0 16px; border-radius: var(--radius);
   background: color-mix(in srgb, #ffffff 70%, transparent);
