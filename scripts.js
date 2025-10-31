@@ -1,20 +1,9 @@
 // Basic parallax enhancement for iOS/Safari fallbacks (no heavy JS)
+// Disable legacy parallax now that hero uses fixed height
 (function () {
   const ua = navigator.userAgent || navigator.vendor || '';
   const isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   if (isIOS) { document.documentElement.classList.add('ios'); }
-  const supportsFixed = window.CSS && CSS.supports && CSS.supports('background-attachment: fixed');
-  const needFallback = isIOS || !supportsFixed;
-  if (!needFallback) return;
-  const heroes = document.querySelectorAll('.hero-parallax');
-  heroes.forEach(h => { h.style.backgroundAttachment = 'scroll'; });
-  const onScroll = () => {
-    const y = window.scrollY;
-    heroes.forEach(h => {
-      h.style.backgroundPosition = `center ${Math.round(y * 0.3)}px`;
-    });
-  };
-  document.addEventListener('scroll', onScroll, { passive: true });
 })();
 
 // Stable viewport height on mobile (avoid resizing on URL bar hide/show)
@@ -65,21 +54,7 @@
   elements.forEach(el => io.observe(el));
 })();
 
-// Toggle hero in-view class to show fixed hero background only when visible
-(function () {
-  const heroes = document.querySelectorAll('.hero-parallax');
-  if (!('IntersectionObserver' in window) || heroes.length === 0) return;
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-      } else {
-        entry.target.classList.remove('in-view');
-      }
-    });
-  }, { threshold: 0 });
-  heroes.forEach(h => io.observe(h));
-})();
+// No fixed-hero overlay needed anymore
 
 // Smooth card reaction when details open/close
 (function () {
