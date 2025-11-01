@@ -71,4 +71,47 @@
   });
 })();
 
+// Language switcher
+(function () {
+  if (typeof translations === 'undefined') return;
+  
+  const getNestedValue = (obj, path) => {
+    return path.split('.').reduce((current, key) => current?.[key], obj);
+  };
+  
+  const setLanguage = (lang) => {
+    const t = translations[lang];
+    if (!t) return;
+    
+    document.documentElement.lang = lang;
+    localStorage.setItem('preferredLang', lang);
+    
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const text = getNestedValue(t, key);
+      if (text !== undefined) {
+        el.innerHTML = text;
+      }
+    });
+    
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      if (btn.getAttribute('data-lang') === lang) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  };
+  
+  const initLang = localStorage.getItem('preferredLang') || 'en';
+  setLanguage(initLang);
+  
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
+      setLanguage(lang);
+    });
+  });
+})();
+
 

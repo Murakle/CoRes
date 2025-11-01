@@ -12,28 +12,32 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="logo" href="index.html">Coral Resurrection</a>
+    <a class="logo" href="index.html">Coral Hero</a>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+      <button class="lang-btn" data-lang="id" aria-label="Bahasa Indonesia">ID</button>
+    </div>
     <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
     <nav class="nav" id="primary-nav">
-      <a class="active" href="index.html">About</a>
-      <a href="trips.html">Trips</a>
-      <a class="cta" href="contact.html">Contact</a>
+      <a class="active" href="index.html" data-i18n="nav.about">About</a>
+      <a href="trips.html" data-i18n="nav.trips">Trips</a>
+      <a class="cta" href="contact.html" data-i18n="nav.contact">Contact</a>
     </nav>
   </header>
 
   <main>
     <section class="hero hero-parallax" style="--hero-image:url('img/bg_about.webp');">
       <div class="hero-content">
-        <h1>About the project</h1>
-        <p>We restore coral reefs by combining nursery propagation, climate-smart outplanting, and community partnerships.</p>
+        <h1 data-i18n="about.hero.title">About the project</h1>
+        <p data-i18n="about.hero.subtitle">We restore coral reefs by combining nursery propagation, climate-smart outplanting, and community partnerships.</p>
       </div>
     </section>
 
     <section class="container split">
       <div class="text">
-        <h2>Why reefs matter</h2>
-        <p>Coral reefs occupy less than <strong>1% of the ocean floor</strong> yet support about <em>25% of marine life</em>. They buffer storms, sustain fisheries, and anchor local economies through nature-based tourism.</p>
-        <p>Heat stress and pollution are pushing many systems past thresholds. Restoration buys time: it <strong>stabilizes structure</strong>, preserves genetics, and keeps ecosystems functional while climate action scales.</p>
+        <h2 data-i18n="about.reefsMatter.title">Why reefs matter</h2>
+        <p data-i18n="about.reefsMatter.p1">Coral reefs occupy less than <strong>1% of the ocean floor</strong> yet support about <em>25% of marine life</em>. They buffer storms, sustain fisheries, and anchor local economies through nature-based tourism.</p>
+        <p data-i18n="about.reefsMatter.p2">Heat stress and pollution are pushing many systems past thresholds. Restoration buys time: it <strong>stabilizes structure</strong>, preserves genetics, and keeps ecosystems functional while climate action scales.</p>
       </div>
       <figure class="media right">
         <img src="img/decor2.jpg" alt="Close-up of healthy coral polyps">
@@ -47,40 +51,40 @@
         <figcaption>Suspended nursery growing climate-tolerant fragments.</figcaption>
       </figure>
       <div class="text">
-        <h2>How it works</h2>
+        <h2 data-i18n="about.howItWorks.title">How it works</h2>
         <ol class="steps">
-          <li><strong>Collect</strong> fragments of opportunity and spawn-derived recruits.</li>
-          <li><strong>Grow</strong> them in ocean nurseries to boost survival and diversity.</li>
-          <li><strong>Outplant</strong> to priority sites with micro-fragment techniques.</li>
-          <li><strong>Monitor</strong> growth, survival, and biodiversity with open protocols.</li>
+          <li data-i18n="about.howItWorks.step1"><strong>Collect</strong> fragments of opportunity and spawn-derived recruits.</li>
+          <li data-i18n="about.howItWorks.step2"><strong>Grow</strong> them in ocean nurseries to boost survival and diversity.</li>
+          <li data-i18n="about.howItWorks.step3"><strong>Outplant</strong> to priority sites with micro-fragment techniques.</li>
+          <li data-i18n="about.howItWorks.step4"><strong>Monitor</strong> growth, survival, and biodiversity with open protocols.</li>
         </ol>
-        <p>All activities follow local permits and are co-designed with neighboring communities to ensure <em>long-term stewardship</em>.</p>
+        <p data-i18n="about.howItWorks.p">All activities follow local permits and are co-designed with neighboring communities to ensure <em>long-term stewardship</em>.</p>
       </div>
     </section>
 
     <section class="container card band">
       <article class="card">
-        <h3>Science-first</h3>
-        <p>We publish methods and results in accessible formats so anyone can track impact and learn from our work.</p>
+        <h3 data-i18n="about.principles.science.title">Science-first</h3>
+        <p data-i18n="about.principles.science.text">We publish methods and results in accessible formats so anyone can track impact and learn from our work.</p>
       </article>
       <article class="card">
-        <h3>Community-led</h3>
-        <p>Local partners guide site selection and care for nurseries, ensuring benefits stay rooted where reefs grow.</p>
+        <h3 data-i18n="about.principles.community.title">Community-led</h3>
+        <p data-i18n="about.principles.community.text">Local partners guide site selection and care for nurseries, ensuring benefits stay rooted where reefs grow.</p>
       </article>
       <article class="card">
-        <h3>Climate-smart</h3>
-        <p>We prioritize heat-tolerant genotypes and shaded microhabitats to improve survival through marine heatwaves.</p>
+        <h3 data-i18n="about.principles.climate.title">Climate-smart</h3>
+        <p data-i18n="about.principles.climate.text">We prioritize heat-tolerant genotypes and shaded microhabitats to improve survival through marine heatwaves.</p>
       </article>
     </section>
 
     <section class="container split">
       <div class="text">
-        <h2>From nurseries to thriving reefs</h2>
-        <p>Restoration is more than planting. We stabilize rubble, design microhabitats, and <strong>stagger outplants</strong> through seasons to improve survival. Each site receives a bespoke plan based on currents, light, and heat history.</p>
+        <h2 data-i18n="about.nurseries.title">From nurseries to thriving reefs</h2>
+        <p data-i18n="about.nurseries.p">Restoration is more than planting. We stabilize rubble, design microhabitats, and <strong>stagger outplants</strong> through seasons to improve survival. Each site receives a bespoke plan based on currents, light, and heat history.</p>
         <ul>
-          <li><strong>Site design:</strong> shade patches, flow corridors, and fish refuges.</li>
-          <li><strong>Genetic diversity:</strong> mix tolerant and fast-growing lineages.</li>
-          <li><strong>Monitoring:</strong> photo quadrats, growth rates, and biodiversity scores.</li>
+          <li data-i18n="about.nurseries.item1"><strong>Site design:</strong> shade patches, flow corridors, and fish refuges.</li>
+          <li data-i18n="about.nurseries.item2"><strong>Genetic diversity:</strong> mix tolerant and fast-growing lineages.</li>
+          <li data-i18n="about.nurseries.item3"><strong>Monitoring:</strong> photo quadrats, growth rates, and biodiversity scores.</li>
         </ul>
       </div>
       <figure class="media right">
@@ -109,17 +113,18 @@
     </section>
 
     <section class="container quote">
-      <blockquote>
-        “Every fragment we plant is a promise to the future reef. The work is patient, the results beautiful.”
+      <blockquote data-i18n="about.quote.text">
+        "Every fragment we plant is a promise to the future reef. The work is patient, the results beautiful."
       </blockquote>
-      <p class="attribution">— Field lead, Coral Resurrection</p>
+      <p class="attribution" data-i18n="about.quote.attribution">— Field lead, Coral Resurrection</p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Coral Resurrection — Open practices, lasting reefs.</p>
+    <p>© <span id="year"></span> Coral Resurrection — <span data-i18n="about.footer">Open practices, lasting reefs.</span></p>
   </footer>
 
+  <script src="translations.js"></script>
   <script src="scripts.js"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
 </body>

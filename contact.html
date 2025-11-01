@@ -13,34 +13,36 @@
 <body>
   <header class="site-header">
     <a class="logo" href="index.html">Coral Resurrection</a>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+      <button class="lang-btn" data-lang="id" aria-label="Bahasa Indonesia">ID</button>
+    </div>
     <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
     <nav class="nav" id="primary-nav">
-      <a href="index.html">About</a>
-      <a href="trips.html">Trips</a>
-      <a class="active cta" href="contact.html">Contact</a>
+      <a href="index.html" data-i18n="nav.about">About</a>
+      <a href="trips.html" data-i18n="nav.trips">Trips</a>
+      <a class="active cta" href="contact.html" data-i18n="nav.contact">Contact</a>
     </nav>
   </header>
 
   <main class="container">
     <header class="page-intro">
-      <h1>Contact</h1>
-      <p>Reach out for trip info, partnerships, or media. We usually respond within 1–2 business days.</p>
+      <h1 data-i18n="contact.title">Contact</h1>
+      <p data-i18n="contact.subtitle">Reach out for trip info, partnerships, or media. We usually respond within 1–2 business days.</p>
     </header>
 
     <section class="contact-grid">
       <div class="contact-card">
-        <h2>Links</h2>
+        <h2 data-i18n="contact.links">Links</h2>
         <ul class="links">
-          <li><a href="#" aria-label="Email">📧 hello@coralresurrection.example</a></li>
-          <li><a href="#" aria-label="Instagram">📸 @coral.resurrection</a></li>
-          <li><a href="#" aria-label="YouTube">▶️ Coral Resurrection Lab</a></li>
-          <li><a href="#" aria-label="Press kit">🗂 Press kit</a></li>
+          <li><a href="mailto:info@coralhero.id" aria-label="Email">📧 info@coralhero.id</a></li>
+          <li><a href="https://www.instagram.com/coralherokomodo/" aria-label="Instagram">📸 @coralherokomodo</a></li>
         </ul>
       </div>
 
       <div class="contact-card">
-        <h2>Where we work</h2>
-        <p>Field operations span the Indian Ocean, Coral Triangle, and Caribbean, in partnership with local organizations.</p>
+        <h2 data-i18n="contact.whereWeWork">Where we work</h2>
+        <p data-i18n="contact.whereText">Field operations span the Indian Ocean, Coral Triangle, and Caribbean, in partnership with local organizations.</p>
       </div>
     </section>
 
@@ -52,9 +54,10 @@
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Coral Resurrection — Say hello.</p>
+    <p>© <span id="year"></span> Coral Resurrection — <span data-i18n="contact.footer">Say hello.</span></p>
   </footer>
 
+  <script src="translations.js"></script>
   <script src="scripts.js"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
 </body>
