@@ -9,38 +9,44 @@ const translations = {
     about: {
       hero: {
         title: "About the project",
-        subtitle: "We restore coral reefs by combining nursery propagation, climate-smart outplanting, and community partnerships."
+        subtitle: "Coral Hero Komodo is a community-led reef restoration initiative in Komodo National Park, Indonesia." +
+               "We restore damaged reefs through coral transplantation and ongoing monitoring—working hand in hand with local communities and divers to protect marine life." +
+               "Our mission is to rebuild healthy reefs, support coastal livelihoods, and inspire more people to care for the ocean"
       },
       reefsMatter: {
         title: "Why reefs matter",
-        p1: "Coral reefs occupy less than <strong>1% of the ocean floor</strong> yet support about <em>25% of marine life</em>. They buffer storms, sustain fisheries, and anchor local economies through nature-based tourism.",
-        p2: "Heat stress and pollution are pushing many systems past thresholds. Restoration buys time: it <strong>stabilizes structure</strong>, preserves genetics, and keeps ecosystems functional while climate action scales."
+        p1: "Coral reefs are among the most biodiverse ecosystems on Earth, providing shelter and food for countless marine species. They protect coastlines from waves and erosion, support fisheries that feed millions, and sustain tourism-based livelihoods.",
+        p2: "Healthy reefs also help stabilize our climate by storing carbon and keeping ocean ecosystems in balance. Their survival ensures the future of countless species, including our own."
       },
       howItWorks: {
         title: "How it works",
-        step1: "<strong>Collect</strong> fragments of opportunity and spawn-derived recruits.",
-        step2: "<strong>Grow</strong> them in ocean nurseries to boost survival and diversity.",
-        step3: "<strong>Outplant</strong> to priority sites with micro-fragment techniques.",
-        step4: "<strong>Monitor</strong> growth, survival, and biodiversity with open protocols.",
-        p: "All activities follow local permits and are co-designed with neighboring communities to ensure <em>long-term stewardship</em>."
+        step1: "<strong>Assess</strong> reef sites to identify areas damaged by anchors, storms, or bleaching, and select suitable restoration zones.",
+        step2: "<strong>Collect</strong> healthy coral fragments from resilient donor colonies or naturally broken pieces.",
+        step3: "<strong>Transplant</strong> these fragments onto stable reef structures or frames to encourage new coral growth.",
+        step4: "<strong>Monitor</strong> survival, growth, and biodiversity over time, involving local divers and community members in long-term stewardship.",
+        p: "All activities follow local permits and are co-designed with community partners to ensure sustainable and measurable impact."
       },
       principles: {
         science: {
-          title: "Science-first",
-          text: "We publish methods and results in accessible formats so anyone can track impact and learn from our work."
+          title: "Science-Based",
+          text: "Our work is guided by ecological understanding and continuous monitoring. We assess reef health, identify threats, and apply proven restoration methods to support long-term reef recovery"
         },
         community: {
-          title: "Community-led",
-          text: "Local partners guide site selection and care for nurseries, ensuring benefits stay rooted where reefs grow."
+          title: "Community-Driven",
+          text: "We collaborate with local divers, fishers, and students to restore and protect the reefs they depend on. By involving the community at every step, we build shared responsibility and lasting conservation impact."
         },
-        climate: {
-          title: "Climate-smart",
-          text: "We prioritize heat-tolerant genotypes and shaded microhabitats to improve survival through marine heatwaves."
+        education: {
+          title: "Education-Focused",
+          text: "Knowledge builds connection. Through field training, outreach, and collaboration with local partners, we promote awareness of reef ecology and inspire more people to care for the ocean."
+        },
+        impact: {
+          title: "Sustainable Impact",
+          text: "Each restoration site is designed to strengthen reef resilience, enhance biodiversity, and support coastal livelihoods. Our focus is on lasting outcomes that protect both nature and community well-being."
         }
       },
       nurseries: {
-        title: "From nurseries to thriving reefs",
-        p: "Restoration is more than planting. We stabilize rubble, design microhabitats, and <strong>stagger outplants</strong> through seasons to improve survival. Each site receives a bespoke plan based on currents, light, and heat history.",
+        title: "From Fragments to thriving reef",
+        p: "Reef restoration begins by identifying damaged areas and recovering viable coral fragments from the surrounding reef. These fragments are secured onto stable structures in suitable habitats to encourage natural growth and regeneration. Over time, they form new reef frameworks that attract fish, invertebrates, and other marine life. Each site contributes to restoring ecological balance and healthy reef ecosystems",
         item1: "<strong>Site design:</strong> shade patches, flow corridors, and fish refuges.",
         item2: "<strong>Genetic diversity:</strong> mix tolerant and fast-growing lineages.",
         item3: "<strong>Monitoring:</strong> photo quadrats, growth rates, and biodiversity scores."

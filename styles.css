@@ -93,7 +93,7 @@ body {
 .media.right { order: 2 }
 .media.left { order: 1 }
 
-.band { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 60px auto }
+.band { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 60px auto }
 .card { background: #ffffff; border: 1px solid rgba(2,6,23,.08); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow) }
 .card h3 { margin-top: 0 }
 
@@ -135,7 +135,7 @@ body {
   .feature { grid-template-columns: 100px 1fr; }
   .split { grid-template-columns: 1fr; }
   .media.right, .media.left { order: initial; }
-  .band { grid-template-columns: 1fr; }
+  .band { grid-template-columns: repeat(2, 1fr); }
   .trip { display: block; }
   .trip img { width: 100%; height: auto; aspect-ratio: 4 / 3; }
   .contact-grid { grid-template-columns: 1fr; }
@@ -145,6 +145,7 @@ body {
 
 /* Compact navigation layout for small screens */
 @media (max-width: 640px) {
+  .band { grid-template-columns: 1fr; }
   .site-header { position: sticky; top: 0; z-index: 100; flex-wrap: wrap; gap: 8px; padding: 10px 14px; }
   .logo { font-size: 1rem; }
   .lang-switcher { order: 2; margin-left: auto; margin-right: 8px; }
