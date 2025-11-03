@@ -10,8 +10,8 @@ const translations = {
       hero: {
         title: "About the project",
         subtitle: "Coral Hero Komodo is a community-led reef restoration initiative in Komodo National Park, Indonesia." +
-               "We restore damaged reefs through coral transplantation and ongoing monitoring—working hand in hand with local communities and divers to protect marine life." +
-               "Our mission is to rebuild healthy reefs, support coastal livelihoods, and inspire more people to care for the ocean"
+          "We restore damaged reefs through coral transplantation and ongoing monitoring—working hand in hand with local communities and divers to protect marine life." +
+          "Our mission is to rebuild healthy reefs, support coastal livelihoods, and inspire more people to care for the ocean"
       },
       reefsMatter: {
         title: "Why reefs matter",
@@ -59,54 +59,111 @@ const translations = {
     },
     trips: {
       title: "Trips — Komodo, Indonesia",
-      subtitle: "All offerings take place around Komodo National Park. Learn coral restoration fundamentals and join purposeful dives in stunning reefs.",
+      subtitle: "Join Coral Hero Komodo in rebuilding coral reefs inside the world-famous Komodo National Park." +
+        "Our coral restoration programs combine education, field practice, and diving in one of Indonesia’s most biodiverse marine ecosystems.",
       trip1: {
-        title: "Educational Coral Restoration Course — Komodo",
+        title: "Coral Conservation Introduction (Inland Program)",
         duration: "Duration:",
         price: "Price:",
         level: "Level:",
         hours: "4 hours",
-        priceValue: "$50",
-        levelValue: "Everyone",
-        description: "A focused lecture covering reef ecology, restoration methods, and Komodo-specific challenges and solutions.",
-        outline: "Course outline",
-        point1: "Reef basics: structure, stressors, and recovery pathways.",
-        point2: "Restoration toolbox: nurseries, micro-fragments, monitoring.",
-        point3: "Komodo case studies and how to contribute responsibly.",
+        priceValue: "USD 50 / IDR 800,000",
+        levelValue: "Perfect for non-divers or anyone wanting to understand coral restoration basics.",
+        description: "This half-day session introduces participants to coral reef ecology, restoration techniques, and community conservation. Learn the fundamentals of coral biology, threats to reefs, and the science behind coral restoration in Komodo.",
+        outline: "What is included",
+        point1: "4-hour classroom session (Introduction, Conservation, Restoration Techniques, Q&A)",
+        point2: "Coral Hero presentation materials",
+        point3: "Certificate of Participation.",
         button: "Book lecture"
       },
       trip2: {
-        title: "Coral Class + 1‑Day Trip (2 dives) — Komodo",
-        duration: "1 day",
-        price: "$150",
-        level: "Snorkeler or Open Water",
-        description: "Morning educational session followed by two guided dives at restoration-adjacent sites with reef-friendly practices.",
-        plan: "Detailed plan",
-        point1: "AM: Classroom session and briefing.",
-        point2: "PM: Two boat dives; buoyancy tune-up, ID basics, photo logging.",
+        title: "Coral Planting Experience (Theory + Local Restoration)",
+        duration: "±8 Hours",
+        price: "USD 120 / IDR 1,950,000",
+        level: "Ideal for divers or snorkelers eager to make a tangible difference in local reef",
+        description: "Spend a full day with our restoration team—learn the theory of coral restoration in the morning, then head out by boat to our active restoration site to plant your own coral fragments.",
+        plan: "What is included",
+        point1: "Classroom theory session (Restoration Ecology, Coral Biology, Techniques)",
+        point2: "Boat transport to local restoration site",
+        point3: "Hands-on coral planting session",
+        point4: "Use of snorkel equipment",
+        point5: {
+          main: "<strong>Optional dive(+USD 50 / IDR 800,000).</strong> Prerequisites for diver:",
+          prerequisites1: "Certified Open Water Diver (or equivalent)",
+          prerequisites2: " Minimum 10 logged dives with good buoyancy"
+        },
         button: "Check availability"
       },
       trip3: {
-        title: "2‑Day Reef Trip (3 dives/day) — Komodo",
-        duration: "2 days",
-        price: "$350",
-        level: "Advanced Open Water recommended",
-        description: "Six dives across high-diversity sites, emphasizing current-smart routes, fish ID, and restoration context.",
+        title: "Coral Restoration Workshop (2 Days)",
+        duration: "2 Days",
+        price: "USD 300 / IDR 4,900,000",
+        level: "Certified Open Water Diver (or equivalent).Minimum 20 logged dives with good buoyancy",
+        description: "A 2-day immersive workshop combining theory, restoration practice, and diving. Learn from our in-house marine restoration instructors and take part in ongoing projects.",
         plan: "Detailed plan",
-        point1: "Day 1: 3 dives (slopes and bommies), sunset debrief.",
-        point2: "Day 2: 3 dives (channels and reefs), impact recap.",
+        includes: "What is included",
+        day1: {
+          title: "Day 1",
+          point1: "Coral ecology and restoration theory.",
+          point2: "Coral planting and maintenance at our restoration site.",
+        },
+        day2: {
+          title: "Day 2",
+          point1: "2 fun dives + 1 restoration dive.",
+          point2: "Data collection and monitoring techniques",
+        },
+        point1: "Hands-on coral planting session (snorkling)",
+        point2: "3 dives (2 fun + 1 restoration)",
+        point3: "Marine park fee",
+        point4: "Dive equipment",
+        point5: "Training manual",
+        point6: "Certificate of Completion",
         button: "Reserve spot"
       },
       trip4: {
-        title: "Advanced Coral Restoration Diving Course — Komodo",
-        duration: "3 days",
-        price: "Contact for pricing",
-        level: "Advanced Open Water + recent dives",
-        description: "Hands-on modules covering survey methods, micro-fragment handling demos, and monitoring workflows, tailored to Komodo.",
-        modules: "Course modules",
-        point1: "Survey design, buoyancy precision, and data standards.",
-        point2: "Nursery maintenance demonstrations and photo quadrats.",
-        point3: "Analysis, reporting, and personal action planning.",
+        title: "PADI Coral Restoration Specialty (3 Days)",
+        duration: "3 Days",
+        price: "USD 500 / IDR 8,200,000",
+        level: "Certified Open Water Diver (or equivalent). Minimum 10 logged dives with good buoyancy",
+        description: "Become a certified Coral Restoration Diver with our official PADI Coral Restoration Specialty. Learn theory, propagation, coral nursery maintenance, and transplantation techniques.",
+        components: {
+          title: "Course Components",
+          point1: "Restoration Ecology Theory",
+          point2: "Physical Restoration (reef structures, substrates, stabilization)",
+          point3: "Coral Transplantation Techniques",
+          point4: "Coral Nursery Maintenance",
+          point5: "Monitoring and Data Collection",
+        },
+        plan: {
+          title: "Detailed Plan",
+          day1: {
+            title: "Day 1 (4 hours)",
+            point1: "Coral ecology and restoration theory",
+          },
+          day2: {
+            title: "Day 2 (day trip)",
+            point1: "1 fun dives + 2 restoration dive",
+            potin2: "Data collection and monitoring techniques"
+          },
+          day3: {
+            title: "Day 3 (day trip)",
+            point1: "1 fun dives + 2 restoration dive",
+            point2: "Coral planting and structure maintenace"
+          }
+        },
+        includes: {
+          title: "What is included",
+          point1: "2 fun dives + 4 coral restoration dives",
+          point2: "PADI Specialty certification fee",
+          point3: "Marine park entry fee",
+          point4: "Training manual",
+          point5: "Coral adoption frame (1 frame per student)"
+        },
+        certifications: {
+          title: "Certifications",
+          potin1: "PADI Coral Restoration Diver Specialty",
+          potin2: "Coral Hero Restoration Certificate"
+        },
         button: "Request syllabus"
       },
       footer: "Travel that restores."
@@ -129,38 +186,42 @@ const translations = {
     about: {
       hero: {
         title: "Tentang proyek",
-        subtitle: "Kami memulihkan terumbu karang dengan menggabungkan propagasi pembibitan, penanaman yang cerdas iklim, dan kemitraan komunitas."
+        subtitle: "Coral Hero Komodo adalah inisiatif restorasi terumbu yang dipimpin komunitas di Taman Nasional Komodo, Indonesia. Kami memulihkan terumbu yang rusak melalui transplantasi karang dan pemantauan berkelanjutan—bekerja bersama masyarakat lokal dan penyelam untuk melindungi kehidupan laut. Misi kami adalah membangun kembali terumbu yang sehat, mendukung mata pencaharian pesisir, dan menginspirasi lebih banyak orang untuk peduli pada laut."
       },
       reefsMatter: {
         title: "Mengapa terumbu penting",
-        p1: "Terumbu karang hanya menempati kurang dari <strong>1% dasar laut</strong> namun mendukung sekitar <em>25% kehidupan laut</em>. Mereka meredam badai, menopang perikanan, dan menopang ekonomi lokal melalui pariwisata berbasis alam.",
-        p2: "Stres panas dan polusi mendorong banyak sistem melewati ambang batas. Restorasi memberikan waktu: <strong>menstabilkan struktur</strong>, melestarikan genetik, dan menjaga ekosistem berfungsi sementara aksi iklim berkembang."
+        p1: "Terumbu karang adalah salah satu ekosistem paling kaya keanekaragaman hayati di Bumi, menyediakan tempat tinggal dan makanan bagi banyak spesies laut. Terumbu melindungi garis pantai dari gelombang dan abrasi, menopang perikanan yang memberi makan jutaan orang, dan mendukung mata pencaharian melalui pariwisata.",
+        p2: "Terumbu yang sehat juga membantu menstabilkan iklim dengan menyimpan karbon dan menjaga keseimbangan ekosistem laut. Kelestarian terumbu memastikan masa depan tak terhitung spesies—termasuk manusia."
       },
       howItWorks: {
         title: "Cara kerjanya",
-        step1: "<strong>Kumpulkan</strong> fragmen peluang dan rekrut yang berasal dari pemijahan.",
-        step2: "<strong>Tumbuhkan</strong> di pembibitan laut untuk meningkatkan kelangsungan hidup dan keanekaragaman.",
-        step3: "<strong>Tanam</strong> ke lokasi prioritas dengan teknik mikro-fragmen.",
-        step4: "<strong>Pantau</strong> pertumbuhan, kelangsungan hidup, dan keanekaragaman hayati dengan protokol terbuka.",
-        p: "Semua kegiatan mengikuti izin lokal dan dirancang bersama dengan komunitas tetangga untuk memastikan <em>pengelolaan jangka panjang</em>."
+        step1: "<strong>Menilai</strong> lokasi terumbu untuk mengidentifikasi area yang rusak oleh jangkar, badai, atau pemutihan, lalu memilih zona restorasi yang sesuai.",
+        step2: "<strong>Mengumpulkan</strong> fragmen karang sehat dari koloni donor yang tangguh atau pecahan alami.",
+        step3: "<strong>Transplantasi</strong> fragmen ke struktur terumbu yang stabil atau rangka untuk mendorong pertumbuhan baru.",
+        step4: "<strong>Memantau</strong> kelangsungan, pertumbuhan, dan keanekaragaman hayati dari waktu ke waktu, melibatkan penyelam dan komunitas lokal dalam perawatan jangka panjang.",
+        p: "Semua kegiatan mengikuti perizinan lokal dan dirancang bersama mitra komunitas untuk memastikan dampak yang berkelanjutan dan terukur."
       },
       principles: {
         science: {
-          title: "Berbasis sains",
-          text: "Kami memublikasikan metode dan hasil dalam format yang mudah diakses sehingga siapa pun dapat melacak dampak dan belajar dari pekerjaan kami."
+          title: "Berbasis Sains",
+          text: "Kerja kami dipandu pemahaman ekologi dan pemantauan berkelanjutan. Kami menilai kesehatan terumbu, mengidentifikasi ancaman, dan menerapkan metode restorasi yang teruji untuk pemulihan jangka panjang."
         },
         community: {
-          title: "Dipimpin komunitas",
-          text: "Mitra lokal memandu pemilihan lokasi dan perawatan pembibitan, memastikan manfaat tetap berakar di tempat terumbu tumbuh."
+          title: "Digerakkan Komunitas",
+          text: "Kami berkolaborasi dengan penyelam, nelayan, dan pelajar setempat untuk memulihkan serta melindungi terumbu yang mereka andalkan. Dengan melibatkan komunitas di setiap langkah, kami membangun tanggung jawab bersama dan dampak konservasi yang bertahan lama."
         },
-        climate: {
-          title: "Cerdas iklim",
-          text: "Kami memprioritaskan genotipe tahan panas dan mikrohabitat teduh untuk meningkatkan kelangsungan hidup melalui gelombang panas laut."
+        education: {
+          title: "Berfokus pada Edukasi",
+          text: "Pengetahuan menumbuhkan kepedulian. Melalui pelatihan lapangan, sosialisasi, dan kolaborasi dengan mitra lokal, kami meningkatkan pemahaman ekologi terumbu dan menginspirasi lebih banyak orang untuk peduli pada laut."
+        },
+        impact: {
+          title: "Dampak Berkelanjutan",
+          text: "Setiap lokasi restorasi dirancang untuk memperkuat ketangguhan terumbu, meningkatkan keanekaragaman hayati, dan mendukung mata pencaharian pesisir. Fokus kami pada hasil jangka panjang yang melindungi alam dan kesejahteraan komunitas."
         }
       },
       nurseries: {
-        title: "Dari pembibitan ke terumbu yang berkembang",
-        p: "Restorasi lebih dari sekadar penanaman. Kami menstabilkan puing-puing, merancang mikrohabitat, dan <strong>menyusun penanaman</strong> melalui musim untuk meningkatkan kelangsungan hidup. Setiap lokasi menerima rencana khusus berdasarkan arus, cahaya, dan riwayat panas.",
+        title: "Dari fragmen menjadi terumbu yang subur",
+        p: "Restorasi terumbu dimulai dengan mengidentifikasi area rusak dan mengambil fragmen karang yang masih layak dari sekitar lokasi. Fragmen kemudian dipasang pada struktur yang stabil di habitat yang sesuai untuk mendorong pertumbuhan dan regenerasi alami. Seiring waktu, fragmen membentuk kerangka terumbu baru yang menarik ikan, invertebrata, dan biota lain. Setiap lokasi membantu memulihkan keseimbangan ekologi dan ekosistem terumbu yang sehat.",
         item1: "<strong>Desain lokasi:</strong> area teduh, koridor aliran, dan tempat perlindungan ikan.",
         item2: "<strong>Keanekaragaman genetik:</strong> campuran keturunan toleran dan cepat tumbuh.",
         item3: "<strong>Pemantauan:</strong> kuadran foto, tingkat pertumbuhan, dan skor keanekaragaman hayati."
@@ -173,7 +234,7 @@ const translations = {
     },
     trips: {
       title: "Perjalanan — Komodo, Indonesia",
-      subtitle: "Semua penawaran berlangsung di sekitar Taman Nasional Komodo. Pelajari dasar-dasar restorasi karang dan ikuti penyelaman bermakna di terumbu yang menakjubkan.",
+      subtitle: "Semua kegiatan berlangsung di sekitar Taman Nasional Komodo. Pelajari dasar restorasi karang dan ikuti penyelaman bermakna di terumbu yang menakjubkan.",
       trip1: {
         title: "Kursus Restorasi Karang Edukatif — Komodo",
         duration: "Durasi:",
@@ -182,7 +243,7 @@ const translations = {
         hours: "4 jam",
         priceValue: "$50",
         levelValue: "Semua orang",
-        description: "Kuliah fokus yang mencakup ekologi terumbu, metode restorasi, serta tantangan dan solusi khusus Komodo.",
+        description: "Kuliah terarah tentang ekologi terumbu, metode restorasi, serta tantangan dan solusi khusus Komodo.",
         outline: "Garis besar kursus",
         point1: "Dasar-dasar terumbu: struktur, tekanan, dan jalur pemulihan.",
         point2: "Perangkat restorasi: pembibitan, mikro-fragmen, pemantauan.",
@@ -194,43 +255,81 @@ const translations = {
         duration: "1 hari",
         price: "$150",
         level: "Snorkeler atau Open Water",
-        description: "Sesi edukatif pagi diikuti dua penyelaman berpandu di lokasi yang berdekatan dengan restorasi dengan praktik ramah terumbu.",
+        description: "Sesi edukasi pagi diikuti dua penyelaman berpemandu di lokasi dekat area restorasi dengan praktik ramah terumbu.",
         plan: "Rencana rinci",
         point1: "Pagi: Sesi kelas dan briefing.",
         point2: "Sore: Dua penyelaman kapal; penyesuaian daya apung, dasar identifikasi, pencatatan foto.",
         button: "Cek ketersediaan"
       },
       trip3: {
-        title: "Perjalanan Terumbu 2 Hari (3 penyelaman/hari) — Komodo",
-        duration: "2 hari",
-        price: "$350",
-        level: "Advanced Open Water direkomendasikan",
-        description: "Enam penyelaman di berbagai lokasi dengan keanekaragaman tinggi, menekankan rute yang cerdas arus, identifikasi ikan, dan konteks restorasi.",
+        title: "Lokakarya Restorasi Karang (2 Hari)",
+        duration: "2 Hari",
+        price: "USD 300 / IDR 4.900.000",
+        level: "Open Water Diver tersertifikasi (atau setara). Minimal 20 log penyelaman dengan buoyancy baik",
+        description: "Lokakarya 2 hari yang mendalam menggabungkan teori, praktik restorasi, dan penyelaman. Belajar bersama instruktur restorasi internal kami dan berkontribusi pada proyek yang sedang berjalan.",
         plan: "Rencana rinci",
-        point1: "Hari 1: 3 penyelaman (lereng dan bommie), debriefing matahari terbenam.",
-        point2: "Hari 2: 3 penyelaman (saluran dan terumbu), ringkasan dampak.",
+        includes: "Yang termasuk",
+        day1: {
+          title: "Hari 1",
+          point1: "Teori ekologi karang dan restorasi.",
+          point2: "Penanaman dan perawatan karang di lokasi restorasi kami."
+        },
+        day2: {
+          title: "Hari 2",
+          point1: "2 fun dives + 1 penyelaman restorasi.",
+          point2: "Teknik pengumpulan data dan pemantauan",
+        },
+        point1: "Sesi penanaman karang langsung (snorkeling)",
+        point2: "3 penyelaman (2 fun + 1 restorasi)",
+        point3: "Tiket masuk taman nasional",
+        point4: "Peralatan selam",
+        point5: "Buku panduan pelatihan",
+        point6: "Sertifikat penyelesaian",
         button: "Pesan tempat"
       },
       trip4: {
-        title: "Kursus Menyelam Restorasi Karang Lanjutan — Komodo",
-        duration: "3 hari",
-        price: "Hubungi untuk harga",
-        level: "Advanced Open Water + penyelaman terkini",
-        description: "Modul praktis yang mencakup metode survei, demo penanganan mikro-fragmen, dan alur kerja pemantauan, disesuaikan untuk Komodo.",
-        modules: "Modul kursus",
-        point1: "Desain survei, presisi daya apung, dan standar data.",
-        point2: "Demonstrasi perawatan pembibitan dan kuadran foto.",
-        point3: "Analisis, pelaporan, dan perencanaan aksi pribadi.",
+        title: "PADI Coral Restoration Specialty (3 Hari)",
+        duration: "3 Hari",
+        price: "USD 500 / IDR 8.200.000",
+        level: "Open Water Diver tersertifikasi (atau setara). Minimal 10 log penyelaman dengan buoyancy baik",
+        description: "Jadilah Coral Restoration Diver tersertifikasi melalui PADI Coral Restoration Specialty resmi. Pelajari teori, propagasi, perawatan nursery karang, dan teknik transplantasi.",
+        components: {
+          title: "Komponen Kursus",
+          point1: "Teori Ekologi Restorasi",
+          point2: "Restorasi Fisik (struktur terumbu, substrat, stabilisasi)",
+          point3: "Teknik Transplantasi Karang",
+          point4: "Perawatan Nursery Karang",
+          point5: "Pemantauan dan Pengumpulan Data",
+        },
+        plan: {
+          title: "Rencana Rinci",
+          day1: { title: "Hari 1 (4 jam)", point1: "Teori ekologi karang dan restorasi" },
+          day2: { title: "Hari 2 (trip harian)", point1: "1 fun dive + 2 penyelaman restorasi", potin2: "Teknik pengumpulan data dan pemantauan" },
+          day3: { title: "Hari 3 (trip harian)", point1: "1 fun dive + 2 penyelaman restorasi", point2: "Penanaman karang dan perawatan struktur" }
+        },
+        includes: {
+          title: "Termasuk",
+          point1: "2 fun dives + 4 penyelaman restorasi karang",
+          point2: "Biaya sertifikasi PADI Specialty",
+          point3: "Tiket masuk taman nasional",
+          point4: "Buku panduan pelatihan",
+          point5: "Adopsi rangka karang (1 rangka per peserta)"
+        },
+        certifications: {
+          title: "Sertifikasi",
+          potin1: "PADI Coral Restoration Diver Specialty",
+          potin2: "Sertifikat Restorasi Coral Hero"
+        },
         button: "Minta silabus"
       },
       footer: "Perjalanan yang memulihkan."
     },
     contact: {
       title: "Kontak",
-      subtitle: "Hubungi kami untuk info perjalanan, kemitraan, atau media. Kami biasanya merespons dalam 1–2 hari kerja.",
+      subtitle: "Hubungi kami untuk informasi perjalanan, kemitraan, atau media. Kami biasanya merespons dalam 1–2 hari kerja.",
       links: "Tautan",
       whereWeWork: "Di mana kami bekerja",
-      whereText: "Operasi lapangan mencakup Samudra Hindia, Segitiga Karang, dan Karibia, bekerja sama dengan organisasi lokal.",
+      whereText: "Kegiatan lapangan mencakup Samudra Hindia, Segitiga Karang, dan Karibia, bekerja sama dengan organisasi lokal.",
       footer: "Ucapkan halo."
     }
   }
