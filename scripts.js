@@ -71,20 +71,41 @@
   });
 })();
 
-// Language switcher
-(function () {
-  if (typeof translations === 'undefined') return;
+// Language switcher - runs immediately when DOM is ready
+(function initLanguage() {
+  // Wait for translations to load
+  if (typeof translations === 'undefined') {
+    // Retry after a short delay if translations.js hasn't loaded yet
+    setTimeout(initLanguage, 50);
+    return;
+  }
   
   const getNestedValue = (obj, path) => {
     return path.split('.').reduce((current, key) => current?.[key], obj);
   };
   
-  const setLanguage = (lang) => {
+  const writeLang = (lang) => {
+    try { localStorage.setItem('preferredLang', lang); } catch (_) {}
+    document.cookie = `preferredLang=${lang}; path=/; max-age=${60*60*24*365}`;
+  };
+
+  const readLang = () => {
+    let lang;
+    try { lang = localStorage.getItem('preferredLang'); } catch (_) { lang = null; }
+    if (!lang) {
+      const m = document.cookie.match(/(?:^|; )preferredLang=([^;]+)/);
+      if (m) lang = decodeURIComponent(m[1]);
+    }
+    return lang || 'en';
+  };
+
+  const setLanguage = (lang, skipSave) => {
     const t = translations[lang];
     if (!t) return;
     
     document.documentElement.lang = lang;
-    localStorage.setItem('preferredLang', lang);
+    // Only persist when explicitly changing language (not on initial load)
+    if (!skipSave) writeLang(lang);
     
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
@@ -94,22 +115,36 @@
       }
     });
     
+    // Update button active states - clear all first
     document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.remove('active');
       if (btn.getAttribute('data-lang') === lang) {
         btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
       }
     });
   };
   
-  const initLang = localStorage.getItem('preferredLang') || 'en';
-  setLanguage(initLang);
+  // Helper to apply the saved language without overwriting it
+  const applySavedLanguage = () => {
+    const savedLang = readLang();
+    setLanguage(savedLang, true);
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.remove('active');
+      if (btn.getAttribute('data-lang') === savedLang) btn.classList.add('active');
+    });
+  };
+
+  // Apply immediately on load
+  applySavedLanguage();
+  // Re-apply on pageshow (handles bfcache/back-forward and some mobile behaviors)
+  window.addEventListener('pageshow', applySavedLanguage);
   
+  // Set up click handlers for language buttons - these WILL save to localStorage
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       const lang = btn.getAttribute('data-lang');
-      setLanguage(lang);
+      setLanguage(lang, false); // false = save to localStorage
     });
   });
 })();
