@@ -115,6 +115,24 @@
       }
     });
     
+    // Handle placeholder translations
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      const text = getNestedValue(t, key);
+      if (text !== undefined) {
+        el.placeholder = text;
+      }
+    });
+    
+    // Handle SVG text elements with data-i18n-key
+    document.querySelectorAll('[data-i18n-key]').forEach(el => {
+      const key = el.getAttribute('data-i18n-key');
+      const text = getNestedValue(t, key);
+      if (text !== undefined) {
+        el.textContent = text;
+      }
+    });
+    
     // Update button active states - clear all first
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.remove('active');

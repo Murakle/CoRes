@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coral Hero — Support</title>
+  <meta name="description" content="Support coral restoration through adoption or building a coral home.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Coral Hero</a>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+      <button class="lang-btn" data-lang="id" aria-label="Bahasa Indonesia">ID</button>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="primary-nav">
+      <a href="index.html" data-i18n="nav.about">About</a>
+      <a href="trips.html" data-i18n="nav.trips">Trips</a>
+      <a href="support.html" class="active" data-i18n="nav.support">Support</a>
+      <a class="cta" href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <header class="page-intro">
+      <h1 data-i18n="support.title">Support Coral Restoration</h1>
+      <p data-i18n="support.subtitle">Help us restore Komodo's reefs. Every contribution directly funds coral transplantation, monitoring, and community education programs.</p>
+    </header>
+
+    <section class="donation-options">
+      <article class="donation-card" data-donation-type="adopt" data-amount="5">
+        <div class="donation-icon">🌊</div>
+        <h2 data-i18n="support.adopt.title">Adopt a Coral</h2>
+        <p class="donation-price" data-i18n="support.adopt.price">$5</p>
+        <p data-i18n="support.adopt.description">Your donation funds one coral fragment that will be transplanted to our restoration site. You'll receive updates on its growth.</p>
+        <button class="button" data-i18n="support.adopt.button">Adopt Now</button>
+      </article>
+
+      <article class="donation-card" data-donation-type="home" data-amount="50">
+        <div class="donation-icon">🏠</div>
+        <h2 data-i18n="support.home.title">Build a Home</h2>
+        <p class="donation-price" data-i18n="support.home.price">$50</p>
+        <p data-i18n="support.home.description">Fund a metal structure that supports multiple corals. Your name will be displayed on the structure, and you'll receive photos of your coral home.</p>
+        <button class="button" data-i18n="support.home.button">Build Now</button>
+      </article>
+    </section>
+  </main>
+
+  <!-- Donation Modal -->
+  <div class="modal-overlay" id="donationModal" aria-hidden="true">
+    <div class="modal">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <h2 data-i18n="support.modal.title">Complete Your Donation</h2>
+      <form id="donationForm">
+        <div class="form-group">
+          <label data-i18n="support.modal.donationType">Donation Type</label>
+          <div class="donation-summary" id="donationSummary"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="donorName" data-i18n="support.modal.name">Your Name</label>
+          <input type="text" id="donorName" name="name" required data-i18n-placeholder="support.modal.namePlaceholder">
+        </div>
+
+        <div class="form-group">
+          <label for="donorEmail" data-i18n="support.modal.email">Your Email</label>
+          <input type="email" id="donorEmail" name="email" required data-i18n-placeholder="support.modal.emailPlaceholder">
+        </div>
+
+        <div class="form-group">
+          <label for="donorComment" data-i18n="support.modal.comment">Comment (Optional)</label>
+          <textarea id="donorComment" name="comment" rows="3" data-i18n-placeholder="support.modal.commentPlaceholder"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="support.modal.paymentMethod">Payment Method</label>
+          <div class="payment-methods">
+            <label class="payment-option">
+              <input type="radio" name="payment" value="xendit" checked>
+              <span data-i18n="support.modal.xendit">Xendit</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="button ghost" data-i18n="support.modal.cancel">Cancel</button>
+          <button type="submit" class="button" data-i18n="support.modal.submit">Proceed to Payment</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Coral Hero — <span data-i18n="support.footer">Every donation makes a difference.</span></p>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="scripts.js"></script>
+  <script src="support.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</body>
+</html>
+

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Not Found — Coral Hero</title>
+  <meta name="description" content="The page you are looking for can’t be found.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Coral Hero</a>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+      <button class="lang-btn" data-lang="id" aria-label="Bahasa Indonesia">ID</button>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="primary-nav">
+      <a href="index.html" data-i18n="nav.about">About</a>
+      <a href="trips.html" data-i18n="nav.trips">Trips</a>
+      <a href="support.html" data-i18n="nav.support">Support</a>
+      <a class="cta" href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-intro" style="text-align:center; padding: 4rem 1rem;">
+      <div style="font-size:64px; line-height:1; margin-bottom: 1rem;">🫧</div>
+      <h1>404 — Page not found</h1>
+      <p>Looks like this page drifted off the reef. Please use the links below.</p>
+      <p style="margin-top:1.5rem;">
+        <a class="button" href="index.html">Go to Home</a>
+        <a class="button ghost" href="support.html" style="margin-left:.5rem;">Go to Support</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Coral Hero</p>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="scripts.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</body>
+</html>
+
+

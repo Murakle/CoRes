@@ -4,6 +4,7 @@ const translations = {
     nav: {
       about: "About",
       trips: "Trips",
+      support: "Support",
       contact: "Contact"
     },
     about: {
@@ -20,10 +21,15 @@ const translations = {
       },
       howItWorks: {
         title: "How it works",
-        step1: "<strong>Assess</strong> reef sites to identify areas damaged by anchors, storms, or bleaching, and select suitable restoration zones.",
-        step2: "<strong>Collect</strong> healthy coral fragments from resilient donor colonies or naturally broken pieces.",
-        step3: "<strong>Transplant</strong> these fragments onto stable reef structures or frames to encourage new coral growth.",
-        step4: "<strong>Monitor</strong> survival, growth, and biodiversity over time, involving local divers and community members in long-term stewardship.",
+        step1: "Assess",
+        step1Desc: "Reef sites are assessed to identify areas damaged by anchors, storms, or bleaching, and select suitable restoration zones.",
+        step2: "Collect",
+        step2Desc: "Healthy coral fragments are collected from resilient donor colonies or naturally broken pieces.",
+        step3: "Transplant",
+        step3Desc: "Fragments are transplanted onto stable reef structures or frames to encourage new coral growth.",
+        step4: "Monitor",
+        step4Desc: "Survival, growth, and biodiversity are monitored over time, involving local divers and community members in long-term stewardship.",
+        caption: "Suspended nursery growing climate-tolerant fragments.",
         p: "All activities follow local permits and are co-designed with community partners to ensure sustainable and measurable impact."
       },
       principles: {
@@ -168,6 +174,37 @@ const translations = {
       },
       footer: "Travel that restores."
     },
+    support: {
+      title: "Support Coral Restoration",
+      subtitle: "Help us restore Komodo's reefs. Every contribution directly funds coral transplantation, monitoring, and community education programs.",
+      adopt: {
+        title: "Adopt a Coral",
+        price: "$5",
+        description: "Your donation funds one coral fragment that will be transplanted to our restoration site. You'll receive updates on its growth.",
+        button: "Adopt Now"
+      },
+      home: {
+        title: "Build a Home",
+        price: "$50",
+        description: "Fund a metal structure that supports multiple corals. Your name will be displayed on the structure, and you'll receive photos of your coral home.",
+        button: "Build Now"
+      },
+      modal: {
+        title: "Complete Your Donation",
+        donationType: "Donation Type",
+        name: "Your Name",
+        namePlaceholder: "Enter your name",
+        email: "Your Email",
+        emailPlaceholder: "Enter your email",
+        comment: "Comment (Optional)",
+        commentPlaceholder: "Add a personal message...",
+        paymentMethod: "Payment Method",
+        xendit: "Xendit",
+        cancel: "Cancel",
+        submit: "Proceed to Payment"
+      },
+      footer: "Every donation makes a difference."
+    },
     contact: {
       title: "Contact",
       subtitle: "Reach out for trip info, partnerships, or media. We usually respond within 1–2 business days.",
@@ -181,6 +218,7 @@ const translations = {
     nav: {
       about: "Tentang",
       trips: "Perjalanan",
+      support: "Dukungan",
       contact: "Kontak"
     },
     about: {
@@ -195,10 +233,15 @@ const translations = {
       },
       howItWorks: {
         title: "Cara kerjanya",
-        step1: "<strong>Menilai</strong> lokasi terumbu untuk mengidentifikasi area yang rusak oleh jangkar, badai, atau pemutihan, lalu memilih zona restorasi yang sesuai.",
-        step2: "<strong>Mengumpulkan</strong> fragmen karang sehat dari koloni donor yang tangguh atau pecahan alami.",
-        step3: "<strong>Transplantasi</strong> fragmen ke struktur terumbu yang stabil atau rangka untuk mendorong pertumbuhan baru.",
-        step4: "<strong>Memantau</strong> kelangsungan, pertumbuhan, dan keanekaragaman hayati dari waktu ke waktu, melibatkan penyelam dan komunitas lokal dalam perawatan jangka panjang.",
+        step1: "Menilai",
+        step1Desc: "Lokasi terumbu dinilai untuk mengidentifikasi area yang rusak oleh jangkar, badai, atau pemutihan, lalu memilih zona restorasi yang sesuai.",
+        step2: "Mengumpulkan",
+        step2Desc: "Fragmen karang sehat dikumpulkan dari koloni donor yang tangguh atau pecahan alami.",
+        step3: "Transplantasi",
+        step3Desc: "Fragmen ditransplantasi ke struktur terumbu yang stabil atau rangka untuk mendorong pertumbuhan baru.",
+        step4: "Memantau",
+        step4Desc: "Kelangsungan, pertumbuhan, dan keanekaragaman hayati dipantau dari waktu ke waktu, melibatkan penyelam dan komunitas lokal dalam perawatan jangka panjang.",
+        caption: "Pembibitan terapung yang menumbuhkan fragmen tahan iklim.",
         p: "Semua kegiatan mengikuti perizinan lokal dan dirancang bersama mitra komunitas untuk memastikan dampak yang berkelanjutan dan terukur."
       },
       principles: {
@@ -323,6 +366,37 @@ const translations = {
         button: "Minta silabus"
       },
       footer: "Perjalanan yang memulihkan."
+    },
+    support: {
+      title: "Dukung Restorasi Karang",
+      subtitle: "Bantu kami memulihkan terumbu Komodo. Setiap kontribusi langsung mendanai transplantasi karang, pemantauan, dan program edukasi komunitas.",
+      adopt: {
+        title: "Adopsi Karang",
+        price: "$5",
+        description: "Donasi Anda mendanai satu fragmen karang yang akan ditransplantasi ke lokasi restorasi kami. Anda akan menerima update tentang pertumbuhannya.",
+        button: "Adopsi Sekarang"
+      },
+      home: {
+        title: "Bangun Rumah",
+        price: "$50",
+        description: "Danai struktur logam yang menopang banyak karang. Nama Anda akan ditampilkan di struktur, dan Anda akan menerima foto rumah karang Anda.",
+        button: "Bangun Sekarang"
+      },
+      modal: {
+        title: "Lengkapi Donasi Anda",
+        donationType: "Jenis Donasi",
+        name: "Nama Anda",
+        namePlaceholder: "Masukkan nama Anda",
+        email: "Email Anda",
+        emailPlaceholder: "Masukkan email Anda",
+        comment: "Komentar (Opsional)",
+        commentPlaceholder: "Tambahkan pesan pribadi...",
+        paymentMethod: "Metode Pembayaran",
+        xendit: "Xendit",
+        cancel: "Batal",
+        submit: "Lanjut ke Pembayaran"
+      },
+      footer: "Setiap donasi membuat perbedaan."
     },
     contact: {
       title: "Kontak",
