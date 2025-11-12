@@ -14,8 +14,8 @@
   // Currency helpers
   const USD_TO_IDR = 20000;
   const getCurrentCurrency = () => {
-    const lang = document.documentElement.lang || 'en';
-    return lang.startsWith('id') ? 'IDR' : 'USD';
+    // Force IDR for all languages
+    return 'IDR';
   };
   const formatAmount = (amount, currency) => {
     const num = Number(amount) || 0;
