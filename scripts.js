@@ -57,15 +57,115 @@
 // No fixed-hero overlay needed anymore
 
 // Smooth card reaction when details open/close
+// Only one details section can be open per trip with smooth height animation
 (function () {
+  // Wrap content in each details element for smooth animation
   document.querySelectorAll('.trip details').forEach(details => {
+    const summary = details.querySelector('summary');
+    if (!summary) return;
+    
+    // Check if content is already wrapped
+    if (details.querySelector('.details-content')) return;
+    
+    // Get all children except summary
+    const contentNodes = Array.from(details.children).filter(child => child !== summary);
+    if (contentNodes.length === 0) return;
+    
+    // Create wrapper
+    const wrapper = document.createElement('div');
+    wrapper.className = 'details-content';
+    contentNodes.forEach(node => wrapper.appendChild(node));
+    details.appendChild(wrapper);
+  });
+  
+  // Handle toggle events with smooth height animation
+  document.querySelectorAll('.trip details').forEach(details => {
+    const summary = details.querySelector('summary');
+    const content = details.querySelector('.details-content');
+    if (!summary || !content) return;
+    
     details.addEventListener('toggle', () => {
       const card = details.closest('.trip');
       if (!card) return;
+      
       if (details.open) {
+        // Measure actual height of content
+        content.style.maxHeight = '';
+        content.style.display = 'block';
+        const height = content.scrollHeight;
+        content.style.maxHeight = '0px';
+        
+        // Trigger reflow
+        content.offsetHeight;
+        
+        // Set max-height for smooth animation
+        requestAnimationFrame(() => {
+          content.style.maxHeight = height + 'px';
+          setTimeout(() => {
+            content.style.display = '';
+          }, 400);
+        });
+        
+        // Close all other details in the same trip
+        const allDetails = card.querySelectorAll('details');
+        allDetails.forEach(otherDetails => {
+          if (otherDetails !== details && otherDetails.open) {
+            const otherContent = otherDetails.querySelector('.details-content');
+            if (otherContent) {
+              // Measure current height while still open
+              const otherCurrentMaxHeight = otherContent.style.maxHeight;
+              otherContent.style.maxHeight = '';
+              otherContent.style.display = 'block';
+              const otherHeight = otherContent.scrollHeight;
+              
+              // Set initial height for animation
+              otherContent.style.maxHeight = otherHeight + 'px';
+              
+              // Trigger reflow to ensure the height is set
+              otherContent.offsetHeight;
+              
+              // Start closing animation
+              requestAnimationFrame(() => {
+                otherContent.style.maxHeight = '0px';
+                // Close the details element and clear styles after animation completes
+                setTimeout(() => {
+                  otherDetails.open = false;
+                  otherContent.style.maxHeight = '';
+                  otherContent.style.display = '';
+                }, 400);
+              });
+            } else {
+              otherDetails.open = false;
+            }
+          }
+        });
         card.classList.add('details-open');
       } else {
-        card.classList.remove('details-open');
+        // Animate closing - measure current height first
+        content.style.maxHeight = '';
+        content.style.display = 'block';
+        const currentHeight = content.scrollHeight;
+        
+        // Set initial height for animation
+        content.style.maxHeight = currentHeight + 'px';
+        
+        // Trigger reflow to ensure the height is set
+        content.offsetHeight;
+        
+        // Animate to 0
+        requestAnimationFrame(() => {
+          content.style.maxHeight = '0px';
+          setTimeout(() => {
+            content.style.maxHeight = '';
+            content.style.display = '';
+          }, 400);
+        });
+        
+        // Check if any details are still open in this trip
+        const anyOpen = Array.from(card.querySelectorAll('details')).some(d => d.open);
+        if (!anyOpen) {
+          card.classList.remove('details-open');
+        }
       }
     });
   });
